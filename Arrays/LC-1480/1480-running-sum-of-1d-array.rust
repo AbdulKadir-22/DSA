@@ -1,0 +1,14 @@
+impl Solution {
+    pub fn running_sum(nums: Vec<i32>) -> Vec<i32> {
+        
+        let mut numbers: Vec<i32> = Vec::new();
+        
+        numbers.push(nums[0]);
+
+        for i in 1..nums.len(){
+            numbers.push(numbers[i - 1] + nums[i]);
+        }
+
+        numbers
+    }
+}
